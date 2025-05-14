@@ -1,0 +1,28 @@
+type ItemListed @entity(immutable: false) {
+    id: ID!
+    nftContract: Bytes!
+    tokenId: BigInt!
+    seller: Bytes!
+    price: BigInt!
+    paymentToken: Bytes!
+    active: Boolean!
+    blockTimestamp: BigInt!
+}
+
+type ItemBought @entity(immutable: false) {
+    id: ID!
+    nftContract: Bytes!
+    tokenId: BigInt!
+    buyer: Bytes!
+    seller: Bytes!
+    price: BigInt!
+    paymentToken: Bytes!
+    timestamp: BigInt!
+}
+
+type ItemCancelled @entity(immutable: false) {
+    id: ID!
+    nftContract: Bytes!
+    tokenId: BigInt!
+    seller: Bytes!
+}
