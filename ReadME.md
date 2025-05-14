@@ -12,9 +12,9 @@
 
 -   Smart Contracts: Solidity
 -   Development Framework: Hardhat
--   Frontend: React.js
 -   Ethereum Web Client Library: ethers.js
 -   File Storage: IPFS
+-   Indexer Used : Graph
 
 ## Getting Started
 
@@ -43,7 +43,7 @@ npm install
 
 ```
 PRIVATE_KEY=your_private_key
-GOERLI_RPC_URL=your_goerli_endpoint
+SEPOLIA_RPC_URL=your_sepolia_endpoint
 ETHERSCAN_API_KEY=your_etherscan_api_key
 ```
 
@@ -107,13 +107,13 @@ npx hardhat coverage
 1. Deploy to testnet (Goerli):
 
 ```bash
-npx hardhat run scripts/deploy.js --network goerli
+npx hardhat run scripts/deploy.js --network sepolia
 ```
 
 2. Verify on Etherscan:
 
 ```bash
-npx hardhat verify --network goerli DEPLOYED_CONTRACT_ADDRESS
+npx hardhat verify --network sepolia DEPLOYED_CONTRACT_ADDRESS
 ```
 
 ## Frontend Interaction
